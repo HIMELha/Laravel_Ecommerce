@@ -10,8 +10,18 @@ use Illuminate\Support\Facades\Validator;
 
 class DiscountController extends Controller
 {
+<<<<<<< HEAD
     public function index(){
         $discount = DiscountCoupon::orderBy("created_at","asc")->paginate(10);
+=======
+    public function index(Request $request){
+        $discount = DiscountCoupon::orderBy("created_at","asc");
+        if(!empty($request->get('key'))){
+            $key = $request->get('key');
+            $discount = DiscountCoupon::where('name', 'like', '%'.$key.'%');
+        }
+        $discount = $discount->paginate(12);
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         return view('admin.coupons.index', ['brand' => $discount]);
     }
 

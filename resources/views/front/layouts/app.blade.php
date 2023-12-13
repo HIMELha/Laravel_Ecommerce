@@ -41,6 +41,7 @@
             
             <ul class="ml-4 md:ml-16 gap-5 mdNav">
               <button id="btnClose" class="btn cursor-pointer md:hidden"><i class="fa-solid fa-close"></i></button>
+<<<<<<< HEAD
               <li><a href="index.html" class="link">Home</li>
               <li class="group relative">
                 <a href="{{ route('front.product') }}" class="link">Shop<i class="fa-solid fa-chevron-down icon"></i></a>
@@ -50,6 +51,11 @@
                     <li><a href="#" class="link">Recent products</a></li>
                   </ul>
                 </div>
+=======
+              <li><a href="{{ route('front.index') }}" class="link">Home </a></li>
+              <li>
+                <a href="{{ route('front.product') }}" class="link">Shop</i></a>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               </li>
               <li class="group relative">
                 <a href="#" class="link">Pages<i class="fa-solid fa-chevron-down icon"></i></a>
@@ -57,6 +63,7 @@
                   <div class="flex justify-between items-start gap-6">
                     <ul>
                       <h2 class="text-[19px] font-medium text-dark py-2 underline">Others pages</h2>
+<<<<<<< HEAD
                       <li><a href="about.html" class="link mt-3">About Us</a></li>
                       <li><a href="contact.html" class="link mt-3">Contact Us</a></li>
                       <li><a href="order-history.html" class="link mt-3">Track order</a></li>
@@ -69,21 +76,44 @@
                       <li><a href="{{ route('front.login') }}" class="link mt-3">Login</a></li>
                       <li><a href="{{ route('front.register') }}" class="link mt-3">Register</a></li>
                       <li><a href="forgot.html" class="link mt-3">Forgot password</a></li>
+=======
+                      <li><a href="{{ route('pages.details', 'About us') }}" class="link mt-3">About Us</a></li>
+                      <li><a href="{{ route('pages.details', 'Contact us') }}" class="link mt-3">Contact Us</a></li>
+                      <li><a href="{{ route('pages.details', 'FAQ') }}" class="link mt-3">Faq</a></li>
+                    </ul>
+                    <ul>
+                      <h2 class="text-[19px] font-medium text-dark py-2 underline">Account pages</h2>
+                      <li><a href="{{ route('user.account') }}" class="link mt-3">My account</a></li>
+                      <li><a href="{{ route('front.login') }}" class="link mt-3">Login</a></li>
+                      <li><a href="{{ route('front.register') }}" class="link mt-3">Register</a></li>
+                      <li><a href="{{ route('front.login') }}" class="link mt-3">Forgot password</a></li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     </ul>
 
                     <ul>
                       <h2
+<<<<<<< HEAD
                         class="text-[19px] font-medium text-dark py-2 underline">
                         checkout pages</h2>
                       <li><a href="pay.html" class="link mt-3">Checkout</a></li>
                       <li><a href="payment-history.html" class="link mt-3">Payments</a></li>
                       <li><a href="wishlists.html" class="link mt-3">Wish List</a></li>
                       <li><a href="order-history.html" class="link mt-3">Order completed</a></li>
+=======
+                      class="text-[19px] font-medium text-dark py-2 underline">
+                      checkout pages</h2>
+                      <li><a href="{{ route('user.wishlist') }}" class="link mt-3">Wish List</a></li>
+                      <li><a href="{{ route('user.orders') }}" class="link mt-3">Order completed</a></li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     </ul>
                   </div>
                 </div>
               </li>
+<<<<<<< HEAD
               <li><a href="contact.html" class="link">Contact</a></li>
+=======
+              <li><a href="{{ route('pages.details', 'Contact us') }}" class="link">Contact</a></li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             </ul>
           </div>
 
@@ -171,7 +201,11 @@
               name="search"
               id="searchs"
               placeholder="Search products..."
+<<<<<<< HEAD
               class="px-3 py-2 mr-[-4px] text-[15px] rounded-l-sm text-dark focus:outline-none"
+=======
+              class="px-3 py-2 mr-[-4px] text-[16px] rounded-l-sm text-dark focus:outline-none"
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             />
             <button class="headBtn">
               <i class="fa-solid fa-search mr-1"></i>search
@@ -226,6 +260,10 @@
                 <div class="flex flex-col justify-start gap-2 mt-6">
                     <a href="{{ route('user.account') }}" class="link"><i class="fa-regular fa-address-card mr-2"></i>My Account</a>
                     <a href="{{ route('user.orders') }}" class="link"><i class="fa-solid fa-gift mr-2"></i>My Orders</a>
+<<<<<<< HEAD
+=======
+                    <a href="{{ route('user.payments') }}" class="link"><i class="fa-solid fa-gift mr-2"></i>My Payments</a>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     <a href="{{ route('user.wishlist') }}" class="link"><i class="fa-regular fa-heart mr-2"></i>My Wish Lists</a>
                     <a href="{{ route('front.carts') }}" class="link"><i class="fa-solid fa-shopping-cart mr-2"></i>My Cart</a>
                     <a href="{{ route('user.logout') }}" class="link"><i class="fa-solid fa-power-off mr-2"></i>Logout</a>
@@ -265,7 +303,11 @@
             </div>
           </div>
           
+<<<<<<< HEAD
           <div class="flex flex-row justify-between sm:justify-around gap-4">
+=======
+          <div class="flex flex-row justify-between sm:justify-start gap-4">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             <div class="flex flex-col gap-2">
               <h2 class="text-xl font-medium uppercase mb-2">MY ACCOUNT</h2>
               <a href="{{ route('user.orders') }}" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Orders</a>
@@ -277,11 +319,19 @@
 
             <div class="flex flex-col gap-2">
               <h2 class="text-xl font-medium uppercase mb-2">INFORMATION</h2>
+<<<<<<< HEAD
               <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>About us</a>
               <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Return Policy</a>
               <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Terms & Conditions</a>
               <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Privacy Plicy</a>
               <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>FAQ</a>
+=======
+              <a href="{{ route('pages.details', 'About us') }}" class="link"><i class="fa-solid fa-angle-right mr-1"></i>About us</a> 
+              <a href="{{ route('pages.details', 'Refund Policy') }}" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Return Policy</a>
+              <a href="{{ route('pages.details', 'Terms & Conditions') }}" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Terms & Conditions</a>
+              <a href="{{ route('pages.details', 'Privacy Policy') }}" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Privacy Policy</a>
+              <a href="{{ route('pages.details', 'FAQ') }}" class="link"><i class="fa-solid fa-angle-right mr-1"></i>FAQ</a>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             </div>
           </div>
 
@@ -289,7 +339,11 @@
             <div class="flex flex-col gap-2">
               <h2 class="text-xl font-medium uppercase mb-2">CONTACT</h2>
               <ul>
+<<<<<<< HEAD
                 <li class="mb-2"><i class="fa-solid fa-location-dot mr-3 text"></i> <span class="text">7895 Dr New Albuquerue, NM 19800,United States Of America</span></li>
+=======
+                <li class="mb-2"><i class="fa-solid fa-location-dot mr-3 text"></i> <span class="text">11 Mirpur, Dhaka</span></li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 <li class="mb-2"><i class="fa-solid fa-phone mr-3 text"></i> <span class="text">+880 183234034</span></li>
                 <li class="mb-2"> <i class="fa-regular fa-envelope mr-3 text"></i> <span class="text">webhimel12@mail.com</span></li>
               </ul>

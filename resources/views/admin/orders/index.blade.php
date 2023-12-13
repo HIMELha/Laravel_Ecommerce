@@ -1,6 +1,10 @@
 @extends('admin.layouts.app')
 
 @section('contents')
+<<<<<<< HEAD
+=======
+    @include('admin.message')
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     <section id="home">
         <!-- main starts here -->
         <section id="main" class="min-h-[98vh] py-3 px-4 mt-12 bg-[#F1F5F9]">

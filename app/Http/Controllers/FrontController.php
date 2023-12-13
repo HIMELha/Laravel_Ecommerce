@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
+=======
+use App\Models\Page;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 use App\Models\Product;
 use App\Models\Wishlist;
 use App\Models\Category;
@@ -96,5 +100,17 @@ class FrontController extends Controller
         return view('front.categories', ['categories' => $categories]);
     }
 
+<<<<<<< HEAD
+=======
+    public function pages($name){
+        $page = Page::where('name', $name)->first();
+        if(!$page){
+            session()->flash('error', 'page not found');
+            return redirect()->route('front.index');
+        }
+        
+        return view('front.pages', compact('page'));
+    }
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     
 }

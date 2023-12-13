@@ -1,10 +1,18 @@
 /.phpunit.cache
+<<<<<<< HEAD
 /node_modules
+=======
+node_modules
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 /public/build
 /public/hot
 /public/storage
 /storage/*.key
+<<<<<<< HEAD
 /vendor
+=======
+vendor
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 .env
 .env.backup
 .env.production

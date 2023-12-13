@@ -96,6 +96,7 @@
     </header>
    <!-- header !starts here d -->
 
+<<<<<<< HEAD
        <!-- navbar start here --> 
     <div id="navbar" class="w-[220px] min-h-screen px-4 py-3 bg-[#343A40] flex flex-col justify-start items-start">
                 <div class="w-full flex pb-2 items-center justify-center border-b">
@@ -135,6 +136,9 @@
                 </ul>
     </div>
     <!-- navbar !start here -->  
+=======
+    @include('admin.layouts.nav') 
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
     @yield('contents')
 

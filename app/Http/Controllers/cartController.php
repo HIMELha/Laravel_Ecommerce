@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\CustomerAddress;
 use App\Models\DiscountCoupon;
+<<<<<<< HEAD
+=======
+use App\Models\Payment;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\OrderItem;
@@ -14,6 +18,10 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
 class cartController extends Controller
 {
@@ -218,7 +226,11 @@ class cartController extends Controller
 
         // step 3
 
+<<<<<<< HEAD
         // if($request->payment_method == 'cod'){
+=======
+        if($request->payment_method == 'bkash'){
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             $couponCodeId = '';
             $couponCode = '';
             $discount = 0;
@@ -267,6 +279,10 @@ class cartController extends Controller
             $order->city = $request->city;
             $order->zip = $request->zip;
             $order->notes = $request->notes;
+<<<<<<< HEAD
+=======
+            $order->admin_notes = '';
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             $order->apartment = $request->apartment;
             $order->country_id = $request->country;
             $order->save();
@@ -294,6 +310,19 @@ class cartController extends Controller
                 
             }
 
+<<<<<<< HEAD
+=======
+            // step 5 create payment
+            $refNumber = Str::random(8);
+            $payment = new Payment;
+            $payment->order_id = $order->id;
+            $payment->user_id = $user->id;
+            $payment->refference = $refNumber;
+            $payment->status = 1;
+            $payment->save();
+
+
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             session()->flash('message', 'Order placed successfully');
 
             Cart::destroy();
@@ -301,13 +330,27 @@ class cartController extends Controller
             return response()->json([
                 'message' =>  'Order saved Successfully',
                 'orderId' => $order->id,
+<<<<<<< HEAD
+=======
+                'grandTotal' => $order->grand_total,
+                'reference' => $refNumber,
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 'status' => true
             ]);
 
             
+<<<<<<< HEAD
         // }else{
 
         // }
+=======
+        }else{
+            return response()->json([
+                'status' => 'payment_error',
+                'payment_error' => 'please select a payment method'
+            ]);
+        }
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     }
 
     public function thankYou($id){

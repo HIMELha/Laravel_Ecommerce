@@ -50,7 +50,11 @@
                 @else
                     <div class="sm:w-1/1 flex flex-col justify-center items-center">
                         <img  id="targetImagess" src="https://gifdb.com/images/high/sad-man-crying-out-loud-meme-74loufg1hlyn7h48.gif" alt="" class="rounded-full w-[200px]">
+<<<<<<< HEAD
                         <h2 class="m-2 text-2xl" >No Products Were Found 😭😭</h2>
+=======
+                        <h2 class="m-2 text-2xl" >No Products Found😭😥</h2>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
                         <audio id="sound" src="{{ asset('front-assets/public/crying.mp3')}}" controls autoplay class="hidden"></audio>
                     </div>

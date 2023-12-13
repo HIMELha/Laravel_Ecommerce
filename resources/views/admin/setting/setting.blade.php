@@ -2,6 +2,11 @@
 @extends('admin.layouts.app')
 
 @section('contents')
+<<<<<<< HEAD
+=======
+
+    @include('admin.message')
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
        <!-- home start here-->
     <section id="home">
         <!-- main starts here -->
@@ -21,7 +26,11 @@
                         </div>
                         
 
+<<<<<<< HEAD
                         <div id="page1" class="w-full px-4 py-3 content bg-white border">
+=======
+                        <div id="page1" class="w-full px-4 py-3 content bg-white border hidden">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                             <p>Manage Primary Settings</p>
                             <div class="px-4 mt-4 flex flex-col gap-2">
                                 <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
@@ -91,7 +100,11 @@
                                 <button class="px-4 py-2 w-[200px] bg-blue-400 hover:bg-blue-500 rounded-md text-[15px] text-white">Save Changes</button>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div id="page2" class="w-full px-4 py-3 content bg-white border content hidden">
+=======
+                        <div id="page2" class="w-full px-4 py-3 content bg-white border  hidden">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                             <p>Manage Front Settings</p>
                             <div class="px-4 mt-4 flex flex-col gap-2">
                                 <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
@@ -168,7 +181,11 @@
                                 </div>
                         </div>
                         
+<<<<<<< HEAD
                         <form  id="page3" class="w-full px-4 py-3 content bg-white border content hidden">
+=======
+                        <form  id="page3" class="w-full px-4 py-3 content bg-white border ">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                             <p>Manage Profile  Settings</p>
                             <form action="" class="px-4 py-3 flex flex-col gap-4">
                                 <div class="w-full flex justify-between gap-4 md:gap-10">
@@ -181,8 +198,12 @@
                                         <input type="email" name="email" placeholder="Email address" value="{{ $user->email }}" class="input">
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 <div class="w-full flex justify-between gap-4 md:gap-10">
                                     
+=======
+                                <div class="w-full flex justify-between gap-4 md:gap-10 mt-4">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                                     <div class="w-full flex flex-col gap-2">
                                         <label for="number" class="label"><i class="fa-solid fa-mobile-screen mr-1"></i>Phone number</label>
                                         <input type="number" name="phone" placeholder="Phone " value="{{ $user->phone }}" class="input">
