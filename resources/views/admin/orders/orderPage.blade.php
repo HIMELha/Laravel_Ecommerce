@@ -1,7 +1,10 @@
 @extends('admin.layouts.app')
 
 @section('contents')
+<<<<<<< HEAD
+=======
     @include('admin.message')
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     <section id="home">
         <!-- main starts here -->
         <section id="main" class="min-h-[98vh] py-3 px-4 mt-12 bg-[#F1F5F9]">
@@ -35,6 +38,9 @@
                                     <p class="text-[17px] text-black">Shipping Charge: <span class="errBtn"> ${{$orders->shipping}}</span></p>
                                     <p class="text-[17px] text-black">Discount: <span class="sucBtn"> ${{$orders->discount}}</span></p>
                                     <p class="text-[17px] text-black">Total amount: <span class="sucBtn"> ${{$orders->grand_total}}</span></p>
+<<<<<<< HEAD
+                                    <p class="text-[17px] text-black">Status: <span class="sucBtn"> {{$orders->order_status}}</span></p>
+=======
                                     <p class="text-[17px] text-black">Order Status: <span class="sucBtn"> {{$orders->order_status}}</span></p>
                                     
                                     <p class="text-[17px] text-black">Payment Status:
@@ -65,6 +71,7 @@
                                         <span class="alertBtn">Payment Refunded</span>
                                     @endif
                                     </p>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
                             </div>
                         </div>
@@ -166,10 +173,13 @@
             });
         })
     </script>
+<<<<<<< HEAD
+=======
 
     <script>
         function refundPayment(){
 
         }
     </script>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 @endsection

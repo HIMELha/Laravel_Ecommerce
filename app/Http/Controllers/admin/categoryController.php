@@ -8,7 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Category;
+<<<<<<< HEAD
+use Illuminate\support\facades\File;
+=======
 use Illuminate\Support\Facades\File;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
 
 class categoryController extends Controller
@@ -61,8 +65,13 @@ class categoryController extends Controller
 
                 $newImageName = $category->id.'.'.$ext;
 
+<<<<<<< HEAD
+                $sPath = public_path().'/temp/'.$tempImage->name;
+                $dPath = public_path().'/uploads/category/'.$newImageName;
+=======
                 $sPath = base_path().'/temp/'.$tempImage->name;
                 $dPath = base_path().'/uploads/category/'.$newImageName;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 File::copy($sPath, $dPath);
 
                 $category->image = $newImageName;
@@ -87,7 +96,11 @@ class categoryController extends Controller
     {
         $data = Category::find($id);
         if(empty($data)){
+<<<<<<< HEAD
+            $request->session()->flash('error', 'category not found');
+=======
             session()->flash('error', 'category not found');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             return redirect()->route('admin.categories');
         }
         return view('admin.categories-edit', ['data' => $data]);
@@ -99,7 +112,11 @@ class categoryController extends Controller
         $category = Category::find($id);
 
         if(empty($category)){
+<<<<<<< HEAD
+            $request->session()->flash('error', 'category not found');
+=======
             session()->flash('error', 'category not found');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             return response()->json([
                 'status' => false,
                 'notFound' => true,
@@ -136,18 +153,31 @@ class categoryController extends Controller
 
                 $newImageName = $category->id.'-'.time().'.'.$ext;
 
+<<<<<<< HEAD
+                $sPath = public_path().'/temp/'.$tempImage->name;
+                $dPath = public_path().'/uploads/category/'.$newImageName;
+=======
                 $sPath = base_path().'/temp/'.$tempImage->name;
                 $dPath = base_path().'/uploads/category/'.$newImageName;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 File::copy($sPath, $dPath);
 
                 $category->image = $newImageName;
                 $category->save();
 
+<<<<<<< HEAD
+                File::delete(public_path('uploads/category/' . $oldImage));
+
+            }
+
+            $request->session()->flash('message', 'category updated succesfully');
+=======
                 File::delete(base_path('uploads/category/' . $oldImage));
 
             }
 
             session()->flash('message', 'category updated succesfully');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
             return response()->json([
                 'status' => true,
@@ -170,11 +200,19 @@ class categoryController extends Controller
             return redirect()->route('admin.categories');
         }
 
+<<<<<<< HEAD
+        File::delete(public_path('uploads/category/' . $category->image));
+
+        $category->delete();
+
+        $request->session()->flash('message', 'category Deleted succesfully');
+=======
         File::delete(base_path('uploads/category/' . $category->image));
 
         $category->delete();
 
         session()->flash('message', 'category Deleted succesfully');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         
         return response()->json([
             'status' => true,

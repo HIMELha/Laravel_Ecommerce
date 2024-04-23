@@ -19,8 +19,11 @@ use App\Http\Controllers\TempImageController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\OrderController;
+<<<<<<< HEAD
+=======
 use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\PaymentController;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -50,7 +53,10 @@ Route::post('/add-to-cart', [cartController::class, 'addToCart'])->name('front.a
 Route::post('/update-cart', [cartController::class, 'updateCart'])->name('front.updateCart');
 Route::post('/delete-cart', [cartController::class, 'deleteCart'])->name('front.deleteCart');
 Route::get('/checkout', [cartController::class, 'checkout'])->name('front.checkout');
+<<<<<<< HEAD
+=======
 
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 Route::post('/process-checkout', [cartController::class, 'processCheckout'])->name('front.processCheckout');
 Route::get('/thanks/{orderId}', [cartController::class, 'thankYou'])->name('front.thankYou');
 Route::post('/get-order-summery', [cartController::class, 'getOrderSummery'])->name('front.getOrderSummery');
@@ -60,9 +66,12 @@ Route::post('/remove-discount', [cartController::class, 'removeDiscount'])->name
 Route::post('/add-to-wishlists', [FrontController::class, 'addToWishlist'])->name('front.addToWishlist');
 Route::post('/save-review', [ShopController::class, 'storeReview'])->name('front.storeReview');
 
+<<<<<<< HEAD
+=======
 Route::get('/pages/{name}', [FrontController::class, 'pages'])->name('pages.details');
 
         
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
 Route::group(['prefix' => 'user'], function () {
 
@@ -80,8 +89,11 @@ Route::group(['prefix' => 'user'], function () {
 
     Route::group(['middleware' => 'auth'], function () {
         Route::get('/account', [AccountController::class, 'index'])->name('user.account');
+<<<<<<< HEAD
+=======
 
         Route::get('/payments', [PaymentController::class, 'index'])->name('user.payments');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         Route::get('/address', [AccountController::class, 'address'])->name('user.address');
         Route::post('/update-profile', [AccountController::class, 'updateProfile'])->name('user.updateProfile');
         Route::get('/orders', [AccountController::class, 'orders'])->name('user.orders');
@@ -91,6 +103,8 @@ Route::group(['prefix' => 'user'], function () {
         Route::post('/deleteWishlist', [FrontController::class, 'deleteWishlist'])->name('user.deleteWishlist');
         
 
+<<<<<<< HEAD
+=======
 
 
         // Payment Routes for bKash
@@ -101,6 +115,7 @@ Route::group(['prefix' => 'user'], function () {
         //search payment
         Route::get('/bkash/search/{trxID}', [App\Http\Controllers\BkashTokenizePaymentController::class,'searchTnx'])->name('bkash-serach');
 
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         Route::get('/logout', [loginController::class, 'logout'])->name('user.logout');
     });
 
@@ -194,6 +209,8 @@ Route::group(['prefix' => 'admin'], function () {
         //Slide routes
         Route::get('/slides', [SlidesController::class, 'index'])->name('admin.slides');
 
+<<<<<<< HEAD
+=======
         //Pages routes
         Route::get('/pages', [PageController::class, 'index'])->name('admin.pages');
         Route::get('/pages/create', [PageController::class, 'create'])->name('pages.create');
@@ -208,6 +225,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/bkash/refund/status', [App\Http\Controllers\BkashTokenizePaymentController::class,'refundStatus'])->name('bkash-refund-status');
         
         
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         Route::get('/profile', [homeController::class, 'profile'])->name('admin.profile');
         Route::post('/update-profile', [homeController::class, 'update'])->name('admin.updateProfile');
         

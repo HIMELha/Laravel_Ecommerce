@@ -101,14 +101,23 @@ class productController extends Controller
                     $productImage->save();
 
                     // Generate Product Thumbnails
+<<<<<<< HEAD
+                    $sPath = public_path() . '/temp/' . $tempImageInfo->name;
+                    $dPath = public_path() . '/uploads/product/' . $imageName;
+=======
                     $sPath = base_path() . '/temp/' . $tempImageInfo->name;
                     $dPath = base_path() . '/uploads/product/' . $imageName;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
                     File::copy($sPath, $dPath);
                 }
             }
 
+<<<<<<< HEAD
+            $request->session()->flash('message', 'Product added succesfully');
+=======
             session()->flash('message', 'Product added succesfully');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
             return response()->json([
                 'status' => true,
@@ -127,7 +136,11 @@ class productController extends Controller
         $product = Product::find($id);
 
         if(empty($product)){
+<<<<<<< HEAD
+            $request->session()->flash('error', 'product not found');
+=======
             session()->flash('error', 'product not found');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             return redirect()->route('admin.products');
         }
         
@@ -187,7 +200,11 @@ class productController extends Controller
             $product->save();
 
 
+<<<<<<< HEAD
+            $request->session()->flash('message', 'Product updated succesfully');
+=======
             session()->flash('message', 'Product updated succesfully');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
             return response()->json([
                 'status' => true,
@@ -206,21 +223,33 @@ class productController extends Controller
         $product = Product::find($id);
 
         if(empty($product)){
+<<<<<<< HEAD
+            $request->session()->flash('error', 'Product not found');
+=======
             session()->flash('error', 'Product not found');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             return redirect()->route('admin.products');
         }
 
         $productImage = productImage::where('product_id', $id)->get();
         if(!empty($productImage)){
             foreach($productImage as $productImage){
+<<<<<<< HEAD
+                File::delete(public_path('uploads/product/'.$productImage->image));
+=======
                 File::delete(base_path('uploads/product/'.$productImage->image));
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             }
         }
 
         ProductImage::where('product_id', $id)->delete();
         $product->delete();
 
+<<<<<<< HEAD
+        $request->session()->flash('message', 'Product Deleted Succesfully');
+=======
         session()->flash('message', 'Product Deleted Succesfully');
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
         return response()->json([
             'status' => true,

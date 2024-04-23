@@ -226,7 +226,12 @@
             data: formArray,
             dataType: 'json',
             success: function (response) {
+<<<<<<< HEAD
+                console.log(response);
+
+=======
                 
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 $('button[type=submit]').prop('disabled', false);
                 if (response.status == true) {
                     window.location.href = "{{ route('admin.products') }}";
@@ -284,7 +289,11 @@
 
 
     function deleteImage(id){
+<<<<<<< HEAD
+        $('#image-row-' +id).remove();
+=======
         $('#image-row-' +id).hide();
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     }
 </script>
 
