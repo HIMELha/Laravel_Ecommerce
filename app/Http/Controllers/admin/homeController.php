@@ -6,8 +6,15 @@ use App\Models\Order;
 use App\Models\User;
 use App\Models\OrderItem;
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+=======
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 use Illuminate\Support\Facades\Validator;
 
 class homeController extends Controller
@@ -66,8 +73,14 @@ class homeController extends Controller
     
     public function settings(){
         $admin = Auth::guard('admin')->user();
+<<<<<<< HEAD
+        $settings = Setting::first();
+        
+        return view('admin.setting.setting', ['user' => $admin, 'settings' => $settings]);
+=======
 
         return view('admin.setting.setting', ['user' => $admin]);
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     }
 
     public function update(Request $request){
@@ -98,4 +111,44 @@ class homeController extends Controller
             ]);
         }
     }
+<<<<<<< HEAD
+
+    public function updateSettings(Request $request){
+        $validator = Validator::make($request->all(), [
+            'image' => 'required',
+            'title' => 'required|max:255',
+            'footer_desc' => 'required|max:800'
+        ]);
+
+        if($validator->fails()){
+            session()->flash("error", $validator->errors()->first());
+            return redirect()->back();
+        }
+
+        $setting = Setting::first();
+        $setting->title = $request->title;
+        $oldImage = base_path('uploads/settings/'.$setting->logo);
+
+        if(file_exists($oldImage)){
+            File::delete($oldImage);
+        }
+
+        $image = $request->image;
+
+        $ext = pathinfo($image, PATHINFO_EXTENSION);
+        $newName = time().".".$ext;
+
+        $image->move(base_path('uploads/settings'), $newName);
+        
+        $setting->logo = $newName;
+        $setting->footer_short_desc = $request->footer_desc;
+        $setting->save();
+
+
+        session()->flash('success', "Settings updated successfully");
+        return redirect()->back();
+        
+    }
+=======
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 }
