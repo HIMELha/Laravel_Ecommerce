@@ -1,0 +1,2 @@
+[14-Dec-2023 13:12:03 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/efoiylwv/public_html/pay_commerce/vendor/composer/platform_check.php on line 24
+[14-Dec-2023 13:12:04 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/efoiylwv/public_html/pay_commerce/vendor/composer/platform_check.php on line 24
