@@ -29,14 +29,18 @@
     @yield('styles')
   </head>
   <body class="overflow-x-hidden">
+<<<<<<< HEAD
     @php
       $settings = \App\Models\Setting::first();
     @endphp
+=======
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     <!-- header start -->
     <header>
       <div class="max-w-[1200px] px-2 flex flex-col mx-auto">
         <div class="py-3 flex justify-between items-center gap-2 bg-white">
           <div class="flex justify-between items-center relative">
+<<<<<<< HEAD
             <a href="{{ route('front.index') }}"
               class=" text-2xl font-medium text-black rounded-sm"
               >
@@ -44,6 +48,14 @@
             </a>
             
             <ul class="ml-4 gap-5 mdNav">
+=======
+            <a
+              href="{{ route('front.index') }}"
+              class="px-2 py-1 text-2xl font-medium text-black rounded-sm"
+              ><img src="{{ asset('front-assets/public/images/download (1).png') }}" class="h-10 " style="width: 100px" alt=""></a>
+            
+            <ul class="ml-4 md:ml-16 gap-5 mdNav">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               <button id="btnClose" class="btn cursor-pointer md:hidden"><i class="fa-solid fa-close"></i></button>
               <li><a href="{{ route('front.index') }}" class="link">Home </a></li>
               <li>
@@ -86,6 +98,7 @@
                 <buttton id="mdNavBtn" class="btn md:hidden cursor-pointer "><i class="fa-solid fa-list"></i></buttton>
                 <button id="smNavBtn" class="btn lg:hidden"><i class="fa-regular fa-circle-down"></i></button>
             </div>
+<<<<<<< HEAD
             <ul id="smNav" class="w-[250px] absolute right-2 top-14 flex flex-col px-4 py-3 ml-16 gap-4 bg-slate-100 rounded-sm z-20 hidden largeNav">
               @guest
                 <li><a href="{{ route('front.login') }}" class="link">Login</a></li>
@@ -93,6 +106,12 @@
               @else
                 <li><a href="{{ route('user.account') }}" class="link">Account</a></li>
                 <li><a href="{{ route('user.orders') }}" class="link">Orders</a></li>
+=======
+            <ul id="smNav" class="w-[250px] absolute right-2 top-14 flex flex-col px-4 py-3 ml-16 gap-4 bg-lightest z-20 hidden largeNav">
+              @guest
+                <li><a href="{{ route('front.login') }}" class="link">Login</a></li>
+                <li><a href="{{ route('front.register') }}" class="link">Register</a></li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               @endguest
               <li>
                 <select
@@ -175,7 +194,11 @@
             </button>
           </form>
 
+<<<<<<< HEAD
           <div class="flex items-center justify-center gap-4 sm:gap-6 relative">
+=======
+          <div class="flex items-center justify-center gap-8 relative">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             <a href="{{ route('user.wishlist') }}">
               <button
                 class="flex flex-col justify-center items-center relative"
@@ -209,9 +232,15 @@
                 <p class="text-light text-[11px]">Account</p>
               </button>
 
+<<<<<<< HEAD
             <div id="account" class="w-[240px] absolute top-16 right-0 px-4 py-3 bg-white shadow-md rounded-sm hidden z-50">
               @guest
                 <h3 class="font-medium">Wellcome to, LotoBD</h3>
+=======
+            <div id="account" class="w-auto absolute top-16 px-4 py-3 bg-white shadow-md rounded-sm hidden z-50">
+              @guest
+                <h3 class="font-medium">Wellcome to, Shop</h3>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 <div class="flex justify-between gap-4 mt-3" >
                     <a href="{{ route('front.login') }}"><button class="btn">Login</button></a>
                     <a href="{{ route('front.register') }}"><button class="btn-hover">SignUp</button></a>
@@ -250,8 +279,13 @@
           <div class="grid">
             <div class="flex flex-col sm:flex-row lg:flex-col items-center gap-3">
               <div>
+<<<<<<< HEAD
                 <a href="{{ route("front.index") }}" class="px-2 py-1 text-2xl font-medium text-black rounded-sm">Loto<span class="text-red text-3xl">BD</span></a>
               <p class="text">Your premier destination for online lottery play. Experience the thrill of global lotteries, convenient ticket purchasing, and real-time results—all in one place. Join us for a chance to turn your dreams into reality!</p>
+=======
+                <a href="#" class="px-2 py-1 text-2xl font-medium text-black rounded-sm">LARABEL<span class="text-red text-3xl">SHOP</span></a>
+              <p class="text">Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used in laying out print, gra phic or web designs the passage.</p>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               </div>
 
               <div class="w-full">
@@ -287,9 +321,15 @@
             <div class="flex flex-col gap-2">
               <h2 class="text-xl font-medium uppercase mb-2">CONTACT</h2>
               <ul>
+<<<<<<< HEAD
                 <li class="mb-2"><i class="fa-solid fa-location-dot mr-3 text"></i> <span class="text">Rangpur, Kurigram</span></li>
                 <li class="mb-2"><i class="fa-solid fa-phone mr-3 text"></i> <span class="text">+880 1747760521</span></li>
                 <li class="mb-2"> <i class="fa-regular fa-envelope mr-3 text"></i> <span class="text">webhimel032@mail.com</span></li>
+=======
+                <li class="mb-2"><i class="fa-solid fa-location-dot mr-3 text"></i> <span class="text">11 Mirpur, Dhaka</span></li>
+                <li class="mb-2"><i class="fa-solid fa-phone mr-3 text"></i> <span class="text">+880 183234034</span></li>
+                <li class="mb-2"> <i class="fa-regular fa-envelope mr-3 text"></i> <span class="text">webhimel12@mail.com</span></li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               </ul>
             </div>
           </div>

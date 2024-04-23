@@ -49,7 +49,14 @@
                     @endforeach
                 @else
                     <div class="sm:w-1/1 flex flex-col justify-center items-center">
+<<<<<<< HEAD
                         <img  style="width: 300px; margin: 30px 0;" src="https://i0.wp.com/www.memelate.com/wp-content/uploads/2023/02/toiob-ali-faruk-confused-meme-template.png?resize=600%2C465&ssl=1" alt="" class="rounded-full w-[200px] h-[200px]">
                         <h2 class="m-2 text-2xl text-center">The database is currently processing your search. <br> Thank you for your patience 🙂🙏</h2>
+=======
+                        <img  id="targetImagess" src="https://gifdb.com/images/high/sad-man-crying-out-loud-meme-74loufg1hlyn7h48.gif" alt="" class="rounded-full w-[200px]">
+                        <h2 class="m-2 text-2xl" >No Products Found😭😥</h2>
+
+                        <audio id="sound" src="{{ asset('front-assets/public/crying.mp3')}}" controls autoplay class="hidden"></audio>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     </div>
                 @endif

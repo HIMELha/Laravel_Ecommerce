@@ -54,7 +54,11 @@
         </div>
        
         <div class="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 items-start gap-4 mt-4 relative">
+<<<<<<< HEAD
            <div  class="grid col-span-1 md:col-span-1 lg:col-span-1 mt-2 shadow-md rounded-md absolute top-12 bg-light md:relative md:top-0 md:block hidden" style="z-index:10" id="productNav">
+=======
+           <div  class="grid col-span-1 md:col-span-1 lg:col-span-1 mt-2 shadow-md rounded-md absolute top-12 bg-light md:relative md:top-0 md:block hidden" id="productNav">
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 <div class="p-5 flex flex-col gap-4  rounded-md">
                     <a href="{{ route('front.product') }}" class=""><button class="btn"><i class="fa-solid fa-trash-can mr-2"></i>Clear Filters</button></a>
                     <h2 class="bigNunito font-bold">Categories</h2>

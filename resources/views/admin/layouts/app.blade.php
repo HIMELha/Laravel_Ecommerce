@@ -18,7 +18,11 @@
         <div class="mx-auto flex justify-between items-center sm:px-4">
             <div class="p-2 flex items-center gap-2 sm:gap-4">
                 <i id="navToggler" class="fa-solid fa-bars text-[16px] text-white cursor-pointer"></i>
+<<<<<<< HEAD
                 <h2 class="text-[18px] text-white font-bold">LotoBD</h2>
+=======
+                <h2 class="text-[18px] text-white font-bold">Laravel Shop</h2>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 <a href="{{ route('admin.dashboard') }}" class="text-[14px] text-white font-thin">Home</a>
             </div>
             <div id="headerIcons" class="p-2 flex items-center">
