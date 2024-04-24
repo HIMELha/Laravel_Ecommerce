@@ -57,6 +57,7 @@ Route::post('/remove-discount', [cartController::class, 'removeDiscount'])->name
 Route::post('/add-to-wishlists', [FrontController::class, 'addToWishlist'])->name('front.addToWishlist');
 Route::post('/save-review', [ShopController::class, 'storeReview'])->name('front.storeReview');
 
+Route::get('/pages/{name}', [FrontController::class, 'pages'])->name('pages.details');
 
 Route::group(['prefix' => 'user'], function () {
 

@@ -35,11 +35,7 @@ class ShippingController extends Controller
             $count = Shipping::where('country_id', $request->country)->count();
 
             if($count > 0){
-<<<<<<< HEAD
                 $request->session()->flash('error', 'Shpping already created');
-=======
-                session()->flash('error', 'Shpping already created');
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 return response()->json([
                     'status' => 'available',
                 ]);
@@ -50,11 +46,7 @@ class ShippingController extends Controller
                 'amount' => $request->charge
             ]);
 
-<<<<<<< HEAD
             $request->session()->flash('message', 'Shpping created successfully');
-=======
-            session()->flash('message', 'Shpping created successfully');
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             return response()->json([
                     'status' => true,
             ]);
@@ -104,11 +96,7 @@ class ShippingController extends Controller
             $shipping->amount = $request->charge;
             $shipping->update();
 
-<<<<<<< HEAD
             $request->session()->flash('message', 'Shpping updated successfully');
-=======
-            session()->flash('message', 'Shpping updated successfully');
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             return response()->json([
                 'status' => true,
             ]);

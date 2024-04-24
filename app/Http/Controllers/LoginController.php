@@ -51,14 +51,11 @@ class LoginController extends Controller
         }
     }
 
-<<<<<<< HEAD
     public function forget(){
         session()->flash('error', "You can't reset your password right now!");
         return view('front.forget');
     }
 
-=======
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     public function logout(){
         Auth::logout();
 
