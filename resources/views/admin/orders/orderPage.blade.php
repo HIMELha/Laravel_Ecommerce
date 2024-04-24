@@ -34,40 +34,7 @@
                                     <p class="text-[17px] text-black">Shipping Charge: <span class="errBtn"> ${{$orders->shipping}}</span></p>
                                     <p class="text-[17px] text-black">Discount: <span class="sucBtn"> ${{$orders->discount}}</span></p>
                                     <p class="text-[17px] text-black">Total amount: <span class="sucBtn"> ${{$orders->grand_total}}</span></p>
-<<<<<<< HEAD
                                     <p class="text-[17px] text-black">Status: <span class="sucBtn"> {{$orders->order_status}}</span></p>
-=======
-                                    <p class="text-[17px] text-black">Order Status: <span class="sucBtn"> {{$orders->order_status}}</span></p>
-                                    
-                                    <p class="text-[17px] text-black">Payment Status:
-                                        @if($payments->trxID != null)
-                                        @php
-                                        
-                                            $objs = new App\Http\Controllers\BkashTokenizePaymentController;
-                                            $trxID = $payments->trxID;
-                                            $paymentID = $payments->paymentID;
-                                            $pay_response = $objs->searchTnx($trxID);
-                                            $amount = $pay_response['amount'];
-                                            $datas = [
-                                                'trxID' => $trxID,
-                                                'paymentID' => $paymentID,
-                                                'amount' => $amount
-                                            ];
-                                            // dd($datas);
-                                            
-                                        @endphp
-                                        @endif 
-                                    @if ($payments->status == 2)
-                                        <span class="sucBtn">Completed</span> | <p>{{ ($amount != '') ? $amount : '' }}</p>
-                                        <br>
-                                        <a href="{{ route('bkash-refund', $datas ) }}"><button class="editBtn">Refund Payment</button></a>
-                                    @elseif($payments->status == 1)
-                                        <span class="alertBtn">Pending</span>
-                                    @else
-                                        <span class="alertBtn">Payment Refunded</span>
-                                    @endif
-                                    </p>
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
                             </div>
                         </div>
@@ -169,13 +136,4 @@
             });
         })
     </script>
-<<<<<<< HEAD
-=======
-
-    <script>
-        function refundPayment(){
-
-        }
-    </script>
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 @endsection

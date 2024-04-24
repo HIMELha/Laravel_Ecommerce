@@ -134,12 +134,6 @@
             $.ajax({
                 url: '{{ route("coupons.store") }}',
                 type: 'post', 
-<<<<<<< HEAD
-=======
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 data: data.serializeArray(),
                 dataType: 'json',
                 success: function(response){

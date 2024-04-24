@@ -37,11 +37,7 @@
                             <div id="rowImg">
                                 @if ($productImage->isNotEmpty())
                                     @foreach ( $productImage as $image)
-<<<<<<< HEAD
                                     <div id="image-row-${{ $image->id }}">
-=======
-                                    <div id="image-row-{{ $image->id }}">
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                                         <input type="text" name="image_array[]" value="{{ $image->id }}" hidden>
                                         <div  id="border">
                                             <img src="{{ asset('uploads/product/'.$image->image) }}" class="sortImage">
@@ -298,25 +294,17 @@
 
 
     function deleteImage(id){
-<<<<<<< HEAD
         
-=======
-
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         $.ajax({
             url: '{{ route("product-images.destroy") }}',
             type: 'delete',
             data:{id: id},
             success: function(response){
-<<<<<<< HEAD
                 if(response.status == true){
                     $('#image-row-'+id).remove();
                 }else{
                     alert(response.message);
                 }
-=======
-                $('#image-row-'+id).remove();
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             }
         });
     }
