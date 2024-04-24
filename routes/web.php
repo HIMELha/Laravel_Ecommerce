@@ -69,10 +69,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::group(['middleware' => 'guest'], function () {
         //Login Reg Routes
         Route::get('/login', [LoginController::class, 'index'])->name('front.login');
-<<<<<<< HEAD
         Route::get('/forget', [LoginController::class, 'forget'])->name('front.forget');
-=======
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         Route::post('/verifyLogin', [LoginController::class, 'login'])->name('front.verifyLogin');
         Route::get('/register', [RegisterController::class, 'index'])->name('front.register');
         Route::post('/create-user', [RegisterController::class, 'create'])->name('front.registerCreate');
