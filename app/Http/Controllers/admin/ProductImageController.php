@@ -24,7 +24,11 @@ class ProductImageController extends Controller
         $imageName = $request->product_id . '-' . $productImage->id.'-'.time().'.'.$ext;
         $productImage->image = $imageName;
         $productImage->save();
+<<<<<<< HEAD
+        $image->move(public_path('uploads/product'), $imageName);   
+=======
         $image->move(base_path('uploads/product'), $imageName);   
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
 
         return response()->json([
@@ -48,7 +52,11 @@ class ProductImageController extends Controller
         }
 
         // delete images from folder
+<<<<<<< HEAD
+        File::delete(public_path('uploads/product/'.$productImage->image));
+=======
         File::delete(base_path('uploads/product/'.$productImage->image));
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
         $productImage->delete();
 

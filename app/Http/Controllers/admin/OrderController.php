@@ -4,7 +4,10 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+<<<<<<< HEAD
+=======
 use App\Models\Payment;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 use App\Models\Product;
 use App\Models\OrderItem;
 use Illuminate\Http\Request;
@@ -26,6 +29,13 @@ class OrderController extends Controller
     }
 
     public function orderPage(Request $request, $id){
+<<<<<<< HEAD
+        $orders = Order::where('orders.id', $id)->select('orders.*','users.name', 'users.email');
+        $orders = $orders->leftJoin('users', 'users.id', 'orders.user_id');
+        $orders = $orders->first();
+
+        $products = OrderItem::where('order_id', $id)->get();
+=======
         $payments = Payment::where('order_id', $id)->first();
 
         $orders = Order::where('orders.id', $id)->select('orders.*','users.name', 'users.email');
@@ -37,6 +47,7 @@ class OrderController extends Controller
         }
         $products = OrderItem::where('order_id', $id)->get();
         $data['payments'] = $payments ;
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
         $data['orders'] = $orders;
         $data['products'] = $products;
         return view('admin.orders.orderPage', $data);

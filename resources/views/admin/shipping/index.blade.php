@@ -25,8 +25,35 @@
                                 </select>
                             </div>
 
+<<<<<<< HEAD
+                            {{-- <div class="bg-blue-600 px-2 py-0 sm:py-1 rounded-sm">
+                                <label for="time" class="text-[13px] text-white">Sort by spelling</label>
+                                <select name="time" id="" class="px-2 py-1 text-xs text-white bg-blue-600 border-none outline-none">
+                                    <option value="">a - z</option>
+                                    <option value="">1-9</option>
+                                </select>
+                            </div>
+
+                            <div class="bg-blue-600 px-2 py-0 sm:py-1 rounded-sm">
+                                <label for="time" class="text-[13px] text-white">Sort by Person</label>
+                                <select name="time" id="" class="px-2 py-1 text-xs text-white bg-blue-600 border-none outline-none">
+                                    <option value="">Admin</option>
+                                    <option value="">Moderator</option>
+                                    <option value="">Seller</option>
+                                </select>
+                            </div> --}}
+
+                            
+
+                            <form action="" class="flex px-2 py-0 sm:py-1 rounded-sm">
+                                <input type="text" name="key" placeholder="Search Shipping"  autocomplete="off" class="input">
+                                <button type="submit" class="btn">Search</button>             
+                            </form>                      
+
+=======
 
     
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                         </div>
 
                          @include('admin.message')

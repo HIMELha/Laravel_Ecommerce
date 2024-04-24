@@ -80,7 +80,11 @@
                 dataType: 'json',
                 success: function(response){
                     $('button[type=submit]').prop('disabled', false);
+<<<<<<< HEAD
+
+=======
                     console.log(response);
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     if(response['status'] == true ){
                         $('.errBtn').hide();
                         window.location.href = '{{ route("admin.categories") }}';

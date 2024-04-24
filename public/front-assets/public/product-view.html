@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- header start -->
+    <header>
+      <div class="max-w-[1200px] px-2 flex flex-col mx-auto">
+        <div class="py-3 flex justify-between items-center gap-2 bg-white">
+          <div class="flex justify-between items-center relative">
+            <a
+              href="index.html"
+              class="px-2 py-1 text-2xl font-medium text-[#beb551] rounded-sm"
+              >M<span class="text-red text-3xl">T</span><span class="text-[#EDD07D]">FE</span></a>
+            
+              <div class="w-5 h-2 bg-green absolute top-[10px] left-7 rounded-md"></div>
+            <ul class="ml-4 md:ml-16 gap-5 mdNav">
+              <button id="btnClose" class="btn cursor-pointer md:hidden"><i class="fa-solid fa-close"></i></button>
+              <li><a href="index.html" class="link">Home<i class="fa-solid fa-chevron-down icon"></i></a></li>
+              <li class="group relative">
+                <a href="products.html" class="link">Shop<i class="fa-solid fa-chevron-down icon"></i></a>
+                <div class="dropdown hidden group-hover:block transition">
+                  <ul>
+                    <li><a href="#" class="link">Top selling</a></li>
+                    <li><a href="#" class="link">Recent products</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="group relative">
+                <a href="#" class="link">Pages<i class="fa-solid fa-chevron-down icon"></i></a>
+                <div class="dropdown w-[500px] hidden group-hover:block transition z-20">
+                  <div class="flex justify-between items-start gap-6">
+                    <ul>
+                      <h2 class="text-[19px] font-medium text-dark py-2 underline">Others pages</h2>
+                      <li><a href="about.html" class="link mt-3">About Us</a></li>
+                      <li><a href="contact.html" class="link mt-3">Contact Us</a></li>
+                      <li><a href="order-history.html" class="link mt-3">Track order</a></li>
+                      <li><a href="faq.html" class="link mt-3">Faq</a></li>
+                      <li><a href="404.html" class="link mt-3">404</a></li>
+                    </ul>
+                    <ul>
+                      <h2 class="text-[19px] font-medium text-dark py-2 underline">Account pages</h2>
+                      <li><a href="profile.html" class="link mt-3">My account</a></li>
+                      <li><a href="login.html" class="link mt-3">Login</a></li>
+                      <li><a href="register.html" class="link mt-3">Register</a></li>
+                      <li><a href="forgot.html" class="link mt-3">Forgot password</a></li>
+                    </ul>
+
+                    <ul>
+                      <h2
+                        class="text-[19px] font-medium text-dark py-2 underline">
+                        checkout pages</h2>
+                      <li><a href="pay.html" class="link mt-3">Checkout</a></li>
+                      <li><a href="payment-history.html" class="link mt-3">Payments</a></li>
+                      <li><a href="wishlists.html" class="link mt-3">Wish List</a></li>
+                      <li><a href="order-history.html" class="link mt-3">Order completed</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="contact.html" class="link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="">
+            <div class="flex items-center gap-3">
+                <buttton id="mdNavBtn" class="btn md:hidden cursor-pointer "><i class="fa-solid fa-list"></i></buttton>
+                <button id="smNavBtn" class="btn lg:hidden"><i class="fa-regular fa-circle-down"></i></button>
+            </div>
+            <ul id="smNav" class="w-[250px] absolute right-2 top-14 flex flex-col px-4 py-3 ml-16 gap-4 bg-lightest z-20 hidden largeNav">
+              <li><a href="login.html" class="link">Login</a></li>
+              <li><a href="register.html" class="link">Register</a></li>
+              <li>
+                <select
+                  name="lang"
+                  id=""
+                  class="text-dark border-none focus:outline-none link cursor-pointer"
+                >
+                  <option
+                    value="Language"
+                    disabled
+                    class="font-semibold text-dark bg-slate-200 border-none"
+                  >
+                    Language
+                  </option>
+                  <option
+                    value="Language"
+                    class="text-dark bg-slate-200 border-none"
+                  >
+                    English
+                  </option>
+                  <option
+                    value="Language"
+                    class="text-dark bg-slate-200 border-none"
+                  >
+                    Bangla
+                  </option>
+                </select>
+              </li>
+              <li>
+                <select
+                  name="lang"
+                  id=""
+                  class="text-dark border-none focus:outline-none link cursor-pointer"
+                >
+                  <option
+                    value="Currency"
+                    disabled
+                    class="font-semibold text-dark bg-slate-200 border-none"
+                  >
+                    Currency
+                  </option>
+                  <option
+                    value="Language"
+                    class="text-dark bg-slate-200 border-none"
+                  >
+                    USD
+                  </option>
+                  <option
+                    value="Language"
+                    class="text-dark bg-slate-200 border-none"
+                  >
+                    BDT
+                  </option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full py-2 bg-blu">
+        <div
+          class="max-w-[1200px] px-2 flex justify-between items-center mx-auto"
+        >
+          <div>
+            <button id="catbtn" class="headBtn w-[200px]">
+              <i class="fa-solid fa-bars-staggered mr-2"></i>All categories
+            </button>
+          </div>
+          
+          <div  class="flex items-center hidden md:block">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search products..."
+              class="px-3 py-2 mr-[-4px] text-[15px] rounded-l-sm text-dark focus:outline-none"
+            />
+            <button class="headBtn">
+              <i class="fa-solid fa-search mr-1"></i>search
+            </button>
+          </div>
+
+          <div class="flex items-center justify-center gap-8 relative">
+            <a href="wishlists.html">
+              <button
+                class="flex flex-col justify-center items-center relative"
+              >
+                <span
+                  class="flex justify-center items-center absolute top-[-6px] right-0 w-5 h-5 text-[14px] bg-red text-light rounded-full"
+                  >5</span
+                >
+                <i class="fa-regular fa-heart text-light text-[25px]"></i>
+                <p class="text-light text-[11px]">Wish List</p>
+              </button>
+            </a>
+
+            <a href="cart.html">
+              <button
+                class="flex flex-col justify-center items-center relative"
+              >
+                <span
+                  class="flex justify-center items-center absolute top-[-6px] right-0 w-5 h-5 text-[14px] bg-red text-light rounded-full"
+                  >5</span
+                >
+                <i class="fa-solid fa-cart-shopping text-light text-[25px]"></i>
+                <p class="text-light text-[11px]">Carts</p>
+              </button>
+            </a>
+
+              <button
+               id="accBtn" class="flex flex-col justify-center items-center "
+              >
+                <i class="fa-regular fa-user text-light text-[25px]"></i>
+                <p class="text-light text-[11px]">Account</p>
+              </button>
+
+            <div id="account" class="w-auto absolute top-16 px-4 py-3 bg-white shadow-md rounded-sm hidden z-50">
+                <h3 class="font-medium">Wellcome to, Shop</h3>
+                <div class="flex justify-between gap-4 mt-3" >
+                    <a href="login.html"><button class="btn">Login</button></a>
+                    <a href="register.html"><button class="btn-hover">SignUp</button></a>
+                </div>
+
+                <div class="flex flex-col justify-start gap-2 mt-6">
+                    <a href="profile.html" class="link"><i class="fa-regular fa-address-card mr-2"></i>My Account</a>
+                    <a href="oder-history.html" class="link"><i class="fa-solid fa-gift mr-2"></i>My Orders</a>
+                    <a href="wishlists.html" class="link"><i class="fa-regular fa-heart mr-2"></i>My Wish Lists</a>
+                    <a href="cart.html" class="link"><i class="fa-solid fa-shopping-cart mr-2"></i>My Cart</a>
+                    <a href="logout.html" class="link"><i class="fa-solid fa-power-off mr-2"></i>Logout</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1200px] px-2 flex justify-between items-center gap-4 mx-auto">
+        <div id="catNav" class="w-[240px] pt-2 bg-light shadow-md absolute  top-0 bottom-0 left-0 hidden z-20">
+          <ul>
+            <li class="text-right m-2">
+                <buttton id="catclose" class="btn !w-full  cursor-pointer "><i class="fa-solid fa-close"></i></buttton>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-solid fa-book text-red"></i>Books</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-solid fa-mobile text-red"></i>Phones</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-solid fa-couch text-red"></i>Furniture</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-regular fa-keyboard text-red"></i>keyboard</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-solid fa-computer text-red"></i>Computer</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-solid fa-gamepad text-red"></i>Games</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category"
+                  ><i class="fa-solid fa-shirt text-red"></i>Clothes</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="category border-none"
+                  ><i class="fa-solid fa-dice-d6 text-red"></i>Find more</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main class="max-w-[1200px] px-2 flex flex-col mx-auto ">
+        <div class="flex items-center gap-2 my-4">
+            <a href=""><i class="fa-solid fa-house text-red"></i></a> 
+            <i class="fa-solid fa-angle-right text-dark"></i>
+            <a href="" class="text-[15px] text-red">Headphones</a> 
+            <i class="fa-solid fa-angle-right text-dark"></i>
+            <a href="" class="link">Havit D2991</a> 
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 ">
+            <div class="flex flex-col">
+                <div class="w-full h-[400px] flex justify-center items-center border bg-slate-100 rounded-sm ">
+                    <img src="images/headphone-3.png" alt="" class="max-w-[400px] max-h-[500px]">
+                </div>
+                <div class="grid grid-cols-4 gap-3 mt-3">
+                    <div class="w-full h-[100px] flex justify-center items-center bg-slate-100 border">
+                        <img src="images/1200px-MonitorLCDlcd.svg.png" alt="" class="max-w-[70px] max-h-20">
+                    </div>
+                    <div class="w-full h-[100px] flex justify-center items-center bg-slate-100 border">
+                        <img src="images/phone-1.png" alt="" class="max-w-[70px] max-h-20">
+                    </div>
+                    <div class="w-full h-[100px] flex justify-center items-center bg-slate-100 border">
+                        <img src="images/microphone.png" alt="" class="max-w-[70px] max-h-20">
+                    </div>
+                    <div class="w-full h-[100px] flex justify-center items-center bg-slate-100 border">
+                        <img src="images/1200px-MonitorLCDlcd.svg.png" alt="" class="max-w-[70px] max-h-20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-start">
+                <h2 class="text-2xl py-2 text-black font-medium uppercase">Headphone only Havit hr-3</h2>
+                <div class="flex">
+                    <p class="text-black font-medium">Ratings:
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <span class="text">(12 Reviews)</span>
+                </p>
+                </div>
+
+                <div class="flex flex-col mt-4 gap-2">
+                    <h3 class="text-black font-medium">Available: <span class="font-medium text-green">In Stock</span></h3>
+                    <h3 class="text-black font-medium">Brand: <span class="font-normal text-blu">Havit</span></h3>
+                    <h3 class="text-black font-medium">Category: <span class="font-normal text-blu">Headphones</span></h3>
+                    <h3 class="text-black font-medium">Items Price</h3>
+                    <div class="flex items-center">
+                        <span class=" text-dark font-bold line-through">$199.00</span>
+                        <span class="text-xl text-red font-bold ml-2">$178.00 /=</span>
+                    </div>
+                    <p class="text mt-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi labore blanditiis
+                    </p>
+
+                    <div class="flex flex-col mt-2">
+                        <h2 class="text-black font-medium">Color</h2>
+                        <div class="flex mt-1 gap-2">
+                            <div class="w-6 h-6 bg-red rounded-sm border border-light hover:outline hover:outline-red"></div>
+                            <div class="w-6 h-6 bg-green rounded-sm border border-light hover:outline hover:outline-green"></div>
+                            <div class="w-6 h-6 bg-blue rounded-sm border border-light hover:outline hover:outline-blue"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col mt-2">
+                        <h2 class="text-black font-medium">Quantity</h2>
+                        <div class="w-min shadow-md flex mt-1 gap-2 border ">
+                           <div class="px-2 py-1 hover:bg-slate-100 border-r"><i class="fa-solid fa-minus"></i></div>
+                           <div class="px-2 py-1">4</div>
+                           <div class="px-2 py-1 hover:bg-slate-100 border-l"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-start gap-6 mt-4 pb-4  border-b">
+                        <a href="#"><button class="btn uppercase"><i class="fa-solid fa-circle-plus mr-2"></i>Add to cart</button></a>
+                        <a href="#"><button class="btn-hover uppercase"><i class="fa-regular fa-heart mr-2"></i>Add Wishlist</button></a>
+                    </div>
+
+                    <div class="flex justify-start gap-3">
+                        <a href="#"><button class="w-10 h-10 flex justify-center items-center  rounded-full border hover:bg-slate-100"><i class="fa-brands fa-facebook-f"></i></button></a>
+                        <a href="#"><button class="w-10 h-10 flex justify-center items-center rounded-full border hover:bg-slate-100"><i class="fa-brands fa-twitter"></i></button></a>
+                        <a href="#"><button class="w-10 h-10 flex justify-center items-center rounded-full border hover:bg-slate-100"><i class="fa-brands fa-vk"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10">
+        <div class="container">
+          <div class="border-b">
+            <button onclick="showPage('page1')" class="btn-hover ">Product Info</button>
+            <button onclick="showPage('page2')" class="btn-hover ">Reviews</button>
+          </div>
+    
+          <div class="pages">
+            <div class="page   mt-2" id="page1">
+              <h2 class="bigNunito mb-2">More about This product</h2>
+              <div class="flex flex-col justify-start">
+                  <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nec condimentum lorem lacus. Lectus libero in vulputate quis massa nisl risus, libero ut. Morbi praesent ipsum sed morbi turpis sed. Amet sed fames fermentum, augue dignissim. Montes, velit velit eu gravida nibh in feugiat.
+                      <br><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nec condimentum lorem lacus. Lectus libero in vulputate quis massa nisl risus, libero ut. Morbi praesent ipsum sed morbi turpis sed. Amet sed fames fermentum, augue dignissim. Montes, velit velit eu gravida nibh in feugiat.</p>
+              
+                  <table class="max-w-[600px] mt-4">
+                          <thead>
+                              <th class="border px-4 py-2">Colors</th>
+                              <th class="border px-4 py-2">Metarial</th>
+                              <th class="border px-4 py-2">Features</th>
+                          </thead>
+                      <tr>
+                          <td class="px-4 py-2 text uppercase">RED, GREEN , YELLOW, BLUE</td>
+                          <td class="px-4 py-2 text uppercase">PLastic, metal</td>
+                          <td class="px-4 py-2 text uppercase">wireless, microphone</td>
+                      </tr>
+                  </table>
+
+                  <p class="text mt-4">Don't Forgot To drop a review</p>
+              </div>
+            </div>
+            
+            <div class="page hidden mt-2" id="page2">
+              <h2 class="bigNunito mb-2">Customer Reviews</h2>
+              <div class="flex flex-col max-w-[600px] justify-center mt-6 gap-6">
+              <div class="flex flex-col gap-2">
+                  <div class="flex justify-between">
+                      <a href="#" class="link mr-2">John35</a>
+                      <p class="text-black font-medium">Rated:
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+
+                          on <span>6/9/2023, 12:25PM</span>
+                      </p> 
+                  </div>
+                  <p class="text">Very nice PRoducts</p>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                  <div class="flex justify-between">
+                      <a href="#" class="link mr-2">Alone3</a>
+                      <p class="text-black font-medium">Rated:
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+
+                          on <span>6/9/2023, 12:25PM</span>
+                      </p> 
+                  </div>
+                  <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam fugiat odio rem nulla velit, autem dolorum aliquid delectus, reiciendis, voluptatibus deleniti corporis voluptates. Accusamus dolore consectetur commodi quibusdam distinctio, tempora iure asperiores vel reiciendis consequuntur quos, ad id nobis impedit in autem repellat delectus esse dolorem optio omnis natus! Recusandae?</p>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                  <div class="flex justify-between">
+                      <a href="#" class="link mr-2">sarif</a>
+                      <p class="text-black font-medium">Rated:
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+                          <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                          <i class="fa-solid fa-star text-gold"></i>
+
+                          on <span>6/9/2023, 12:25PM</span>
+                      </p> 
+                  </div>
+                  <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam fugiat odio rem nulla velit, autem dolorum aliquid delectus, reiciendis, voluptatibus deleniti corporis voluptates. Accusamus dolore</p>
+              </div>
+
+              <div class="flex flex-col gap-4">
+                  
+                  <select name="ratings" id="" class="focus:outline-none">
+                      <option selected>Select Ratings</option>
+                      <option value="">1</option>
+                      <option value="">4</option>
+                      <option value="">6</option>
+                      <option value="">5</option>
+                  </select>
+
+                  <textarea name="" id="" class="w-full h-[100px] px-3 py-2 border border-blue focus:outline-none"></textarea>
+
+                  <button class="btn">Submit Review</button>
+              </div>
+            </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-16">
+        <h2 class="headerText">Related Products</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4  mt-6">
+
+            <div class="w-[300px] mx-auto sm:w-[280px]  flex flex-col shadow-sm border rounded-sm group">
+              <div class="py-2 px-6 w-full h-[160px] flex justify-center bg-slate-100 relative">
+                <div class="absolute top-0 right-0 w-16 h-8 flex justify-center items-center bg-blue rounded-l-md group-hover:hidden">
+                   <p class="text-light ml-1 ">- 3.88%</p>
+                </div>
+                <div class="absolute top-0 right-0 bottom-0 w-full h-full flex justify-center items-center gap-4 bg-[rgba(0,0,0,0.4)] rounded-l-md group-hover:flex hidden">
+                  <a href="#" class="btn"><i class="fa-regular fa-eye"></i></a>
+                  <a href="#" class="btn"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <img src="images/1200px-MonitorLCDlcd.svg.png" alt="" class="h-full">
+              </div>
+              <div class="p-4">
+                <a href="" class="text-xl text-blu hover:text-hover">Lcd Monitor</a><br>
+                <span class=" text-dark font-bold line-through">$199.00</span>
+                <span class="text-xl text-red font-bold ml-2">$178.00</span>
+                <p class="text-black font-medium">Ratings:
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                </p>
+              </div>
+              <button class="btn text-center uppercase"><i class="fa-solid fa-shopping-cart"></i> Add to cart</button>
+            </div>
+
+            <div class="w-[300px] mx-auto sm:w-[280px]  flex flex-col shadow-sm border rounded-sm group">
+              <div class="py-2 px-6 w-full h-[160px] flex justify-center bg-slate-100 relative">
+                <div class="absolute top-0 right-0 w-16 h-8 flex justify-center items-center bg-blue rounded-l-md group-hover:hidden">
+                   <p class="text-light ml-1 ">- 3.88%</p>
+                </div>
+                <div class="absolute top-0 right-0 bottom-0 w-full h-full flex justify-center items-center gap-4 bg-[rgba(0,0,0,0.4)] rounded-l-md group-hover:flex hidden">
+                  <a href="#" class="btn"><i class="fa-regular fa-eye"></i></a>
+                  <a href="#" class="btn"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <img src="images/mechanicalkeyboards-2048px-4906-2x1-1.webp" alt="" class="h-full">
+              </div>
+              <div class="p-4">
+                <a href="" class="text-xl text-blu hover:text-hover">Mechanical Keyboards</a><br>
+                <span class=" text-dark font-bold line-through">$499.00</span>
+                <span class="text-xl text-red font-bold ml-2">$258.00</span>
+                <p class="text-black font-medium">Ratings:
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                </p>
+              </div>
+              <button class="btn text-center uppercase"><i class="fa-solid fa-shopping-cart"></i> Add to cart</button>
+            </div>
+
+            <div class="w-[300px] mx-auto sm:w-[280px]  flex flex-col shadow-sm border rounded-sm group">
+              <div class="py-2 px-6 w-full h-[160px] flex justify-center bg-slate-100 relative">
+                <div class="absolute top-0 right-0 w-16 h-8 flex justify-center items-center bg-blue rounded-l-md group-hover:hidden">
+                   <p class="text-light ml-1 ">- 3.88%</p>
+                </div>
+                <div class="absolute top-0 right-0 bottom-0 w-full h-full flex justify-center items-center gap-4 bg-[rgba(0,0,0,0.4)] rounded-l-md group-hover:flex hidden">
+                  <a href="#" class="btn"><i class="fa-regular fa-eye"></i></a>
+                  <a href="#" class="btn"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <img src="images/remimonitor.jpg" alt="" class="h-full">
+              </div>
+              <div class="p-4">
+                <a href="" class="text-xl text-blu hover:text-hover">Redmi 5G montiro</a><br>
+                <span class=" text-dark font-bold line-through">$499.00</span>
+                <span class="text-xl text-red font-bold ml-2">$258.00</span>
+                <p class="text-black font-medium">Ratings:
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                </p>
+              </div>
+              <button class="btn text-center uppercase"><i class="fa-solid fa-shopping-cart"></i> Add to cart</button>
+            </div>
+
+            <div class="w-[300px] mx-auto sm:w-[280px]  flex flex-col shadow-sm border rounded-sm group">
+              <div class="py-2 px-6 w-full h-[160px] flex justify-center bg-slate-100 relative">
+                <div class="absolute top-0 right-0 w-16 h-8 flex justify-center items-center bg-blue rounded-l-md group-hover:hidden">
+                   <p class="text-light ml-1 ">- 3.88%</p>
+                </div>
+                <div class="absolute top-0 right-0 bottom-0 w-full h-full flex justify-center items-center gap-4 bg-[rgba(0,0,0,0.4)] rounded-l-md group-hover:flex hidden">
+                  <a href="#" class="btn"><i class="fa-regular fa-eye"></i></a>
+                  <a href="#" class="btn"><i class="fa-regular fa-heart"></i></a>
+                </div>
+                <img src="images/Havit ms814.jpg" alt="" class="h-full">
+              </div>
+              <div class="p-4">
+                <a href="" class="text-xl text-blu hover:text-hover">Hv-ms814 Gaming mouse</a><br>
+                <span class=" text-dark font-bold line-through">$499.00</span>
+                <span class="text-xl text-red font-bold ml-2">$258.00</span>
+                <p class="text-black font-medium">Ratings:
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                    <i class="fa-regular fa-star-half-stroke text-gold"></i>
+                    <i class="fa-solid fa-star text-gold"></i>
+                </p>
+              </div>
+              <button class="btn text-center uppercase"><i class="fa-solid fa-shopping-cart"></i> Add to cart</button>
+            </div>
+            
+      </div>
+
+    </main>
+    <!-- main start -->
+
+
+
+
+    <!-- footer start -->
+    <footer class="mt-12 px-2 py-4 bg-gray-200">
+      <div class="max-w-[1200px] px-2 flex flex-col mx-auto">
+        <div class="py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+          <div class="grid">
+            <div class="flex flex-col sm:flex-row lg:flex-col items-center gap-3">
+              <div>
+                <a href="#" class="px-2 py-1 text-2xl font-medium text-black rounded-sm">M<span class="text-red text-3xl">T</span><span>FE</span></a>
+              <p class="text">Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used in laying out print, gra phic or web designs the passage.</p>
+              </div>
+
+              <div class="w-full">
+              <h2 class="text-xl font-medium uppercase">Newslater</h2>
+              <div class="flex items-center">
+                <input type="email" name="email" placeholder="Email Address" class="py-[10px] px-4 mr-[-4px] text-black text-[13px] font-light border border-red focus:outline-none rounded-l-md"> <button class="btn !shadow-none">Subscribe</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex flex-row justify-between sm:justify-around gap-4">
+            <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-medium uppercase mb-2">MY ACCOUNT</h2>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Orders</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Wishlist</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Track Orders</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Manage Account</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Return Order</a>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-medium uppercase mb-2">INFORMATION</h2>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>About us</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Return Policy</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Terms & Conditions</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>Privacy Plicy</a>
+              <a href="" class="link"><i class="fa-solid fa-angle-right mr-1"></i>FAQ</a>
+            </div>
+          </div>
+
+          <div class="flex lg:justify-center">
+            <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-medium uppercase mb-2">CONTACT</h2>
+              <ul>
+                <li class="mb-2"><i class="fa-solid fa-location-dot mr-3 text"></i> <span class="text">7895 Dr New Albuquerue, NM 19800,United States Of America</span></li>
+                <li class="mb-2"><i class="fa-solid fa-phone mr-3 text"></i> <span class="text">+880 183234034</span></li>
+                <li class="mb-2"> <i class="fa-regular fa-envelope mr-3 text"></i> <span class="text">webhimel12@mail.com</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+
+    <div class="px-2 bg-blu">
+    <div class="max-w-[1200px] mx-auto http://localhost:5173/index.html?email=# px-2 py-2 flex justify-between items-center ">
+      <div class="py-2 flex justify-between bg-blu ">
+         <a href="" class="text-sm text-light font-medium font-['Nunito'] hover:text-hover uppercase">© All Rights Are Reserved</a> 
+      </div>
+
+      <div>
+        <img src="images/payment-method.png" alt="" class="h-6">
+      </div>
+    </div>
+
+
+    <!-- javascript files -->
+    <script src="script.js"></script>
+    </body>
+</html>

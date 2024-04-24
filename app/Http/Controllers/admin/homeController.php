@@ -62,8 +62,13 @@ class homeController extends Controller
     }
 
     public function profile(){
+<<<<<<< HEAD
+
+        return view('admin.setting.setting');
+=======
         $user = Auth::guard('admin')->user();
         return view('admin.profile', compact('user'));
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
     }
     
     public function settings(){

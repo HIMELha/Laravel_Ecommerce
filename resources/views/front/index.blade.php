@@ -9,12 +9,19 @@
             </li>
             @if(getCategories()->isNotEmpty())
             @foreach (getCategories() as $category)
+<<<<<<< HEAD
+              <li>
+=======
             <li>
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               <a href="{{ route('front.products', $category->slug) }}">
                 <span class="category"><i class="fa-solid fa-{{$category->name}} text-red"></i>{{$category->name}}</span>
               </a>
             </li>
+<<<<<<< HEAD
+=======
             
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             @endforeach
             @endif
             <li>
@@ -30,7 +37,11 @@
             <!-- Slides -->
             @if($slides->isNotEmpty())
               @foreach ($slides as $item)
+<<<<<<< HEAD
+              <div class="swiper-slide" style="display:flex ;align-items: justify-center; justify-contents: justify-between" >
+=======
               <div class="swiper-slide" style="display: flex; align-items: center; justify-content: center;" >
+>>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                   <div class="pb-8 md:pb-0 flex flex-col md:flex-row items-center justify-center ">
 
                       @php 
