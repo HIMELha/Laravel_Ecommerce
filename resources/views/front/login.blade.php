@@ -51,22 +51,14 @@
                   <span class="text-[17px] font-medium text-black">Remember me</span>
                </label>
 
-<<<<<<< HEAD
                <a href="{{ route('front.forget') }}" class="link">Forgot Password?</a>
-=======
-               <a href="forgot.html" class="link">Forgot Password?</a>
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             </div>
             
             <div class="flex justify-between gap-1 mt-4">
               <button type="submit" class="w-full btn">Login</button>
             </div>
 
-<<<<<<< HEAD
             {{-- <div class="flex flex-col gap-1 my-6 relative">
-=======
-            <div class="flex flex-col gap-1 my-6 relative">
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
               <p class="w-[200px] mx-auto text !text-[16px] text-center  uppercase bg-light px-4 z-20">Or Continue With</p>
               <div class="absolute w-full border-b border-lightest bg-dark top-[10px]">
               </div>
@@ -76,11 +68,7 @@
                <a href=""><button class="px-6 py-2 bg-blue border border-blue text-light rounded-sm hover:bg-white hover:text-blue"><i class="fa-brands fa-facebook-f mr-2"></i>Facebook</button></a>
                <a href=""><button class="px-6 py-2 bg-orange border border-orange text-light rounded-sm hover:bg-white hover:text-orange"><i class="fa-brands fa-google mr-2"></i>Google</button></a>
                <a href=""><button class="px-6 py-2 btn"><i class="fa-regular fa-envelope odd:mr-2"></i>Email</button></a>
-<<<<<<< HEAD
               </div> --}}
-=======
-              </div>
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
               <div class="flex justify-center gap-1 mt-6">
 

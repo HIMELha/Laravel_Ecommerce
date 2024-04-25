@@ -189,7 +189,6 @@
                     </div>
 
                     <div class="flex flex-col justify-between gap-1">
-<<<<<<< HEAD
                         <label class="flex items-center gap-2 cursor-pointer">
                             <input type="checkbox" checked name="cod" class="form-checkbox w-4 h-4 text-red bg-red border border-red" id="pay_one">
                             <span class="text-[17px] font-medium text-black">Cash on delivery</span>
@@ -201,23 +200,6 @@
 
                         
                         <div class="flex flex-col justify-between gap-2 mt-2 hidden"  id="card_box" >
-=======
-                        {{-- <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" name="homeDel" class="form-checkbox w-4 h-4 text-red bg-red border border-red" id="pay_one">
-                            <span class="text-[17px] font-medium text-black">Cash on delivery</span>
-                        </label> --}}
-                        {{-- <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" name="stripe" class="form-checkbox w-4 h-4 text-red bg-red border border-red" id="pay_two">
-                            <span class="text-[17px] font-medium text-black">Stripe</span>
-                        </label> --}}
-
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" checked name="payment_method" value="bkash" class="form-checkbox w-4 h-4 text-red bg-red border border-red" id="pay_one">
-                            <span class="text-[17px] font-medium text-black">Bkash Payment</span>
-                        </label>
-                        
-                        {{-- <div class="flex flex-col justify-between gap-2 mt-2 hidden"  id="card_box" >
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                             <label for="card_number" class="text-[18px] font-medium text-black">Card number</label>
                             <input type="text" class="input"    
                             name="card_number" placeholder="Valid Card Number">
@@ -230,11 +212,7 @@
                                 name="card_number" placeholder="CCV Date">
 
                             </div>
-<<<<<<< HEAD
                         </div>
-=======
-                        </div> --}}
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     </div>
                     
                     <div class="flex justify-between  mt-2">
@@ -244,11 +222,6 @@
                         </label>
                     </div>
                     
-<<<<<<< HEAD
-=======
-                    <p id="payment_error"></p>
-
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     <button class="btn-hover">Procced To Checkout</button>
                 </div>
            </div>
@@ -409,19 +382,8 @@
                     }else{
                         $('#state').removeClass('invalid').siblings('p').removeClass('red').html('');
                     }
-<<<<<<< HEAD
                 }else{
                     window.location.href = "{{ url('/thanks/') }}/"+response.orderId;
-=======
-
-                }else if(response.status == 'payment_error'){
-                     $('#payment_error').addClass('red').html(response.payment_error);
-                }else if(response.status == true){
-                    
-                    var responseJson = JSON.stringify(response);
-                    var url = "{{ route('bkash-create-payment') }}?data=" + encodeURIComponent(responseJson);
-                    window.location.href = url;
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                 }
 
                 }

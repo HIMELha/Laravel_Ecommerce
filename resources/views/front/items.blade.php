@@ -380,7 +380,6 @@
 
         var mainImage = document.getElementById('MainImg');
         const imagesDiv = document.querySelectorAll('#imagesList #imgdiv');
-<<<<<<< HEAD
 
         imagesDiv.forEach((div) =>{
             div.addEventListener('click', function(){
@@ -388,22 +387,6 @@
                 mainImage.src = img.src;
             });
         });
-=======
-            console.log(imagesDiv)
-
-            imagesDiv.forEach((div) =>{
-                div.addEventListener('click', function(){
-
-                    imagesDiv.forEach((othersDiv) => {
-                        othersDiv.classList.remove('border-red');
-                    })
-
-                    div.classList.add('border-red');
-                    const img = div.querySelector('img');
-                    mainImage.src = img.src;
-                });
-            });
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
 
     </script>
 @endsection

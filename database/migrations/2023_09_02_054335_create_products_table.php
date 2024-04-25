@@ -15,11 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-<<<<<<< HEAD
             $table->text('description')->nullable();
-=======
-            $table->longText('description')->nullable();
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
             $table->double('price', 10,2);
             $table->double('compare_price', 10,2)->nullable();
             $table->foreignId('category_id')->constrained()->onDelete('cascade');

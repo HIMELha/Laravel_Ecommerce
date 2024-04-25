@@ -25,14 +25,8 @@
 
                 <ul class="flex flex-col gap-2 ml-6">
                     <li><a href="{{ route('user.orders') }}" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Order History</a></li>
-<<<<<<< HEAD
-                    <li><a href="payments.html" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Payments</a></li>
-                    <li><a href="my-reviews.html" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Items Reviews</a></li>
-=======
-                    <li><a href="{{ route('user.payments') }}" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Payments</a></li>
-                    {{--
-                    <li><a href="my-reviews.html" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Items Reviews</a></li> --}}
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
+                    {{-- <li><a href="payments.html" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Payments</a></li> --}}
+                    {{-- <li><a href="my-reviews.html" class="link"><i class="fa-solid fa-caret-right mr-1"></i>Items Reviews</a></li> --}}
                 </ul>
             </div>
 
@@ -41,7 +35,7 @@
             </div>
 
             <div class="flex flex-col  gap-4 px-4 py-3 shadow-md rounded-sm border border-light">
-                <a href="login.html" class="!text-xl font-medium hover:text-red"><i class="fa-solid fa-power-off mr-2"></i>Log Out</a>
+                <a href="{{ route('user.logout') }}" class="!text-xl font-medium hover:text-red"><i class="fa-solid fa-power-off mr-2"></i>Log Out</a>
             </div>
         </div>
     </div>

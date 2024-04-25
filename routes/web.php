@@ -57,6 +57,7 @@ Route::post('/remove-discount', [cartController::class, 'removeDiscount'])->name
 Route::post('/add-to-wishlists', [FrontController::class, 'addToWishlist'])->name('front.addToWishlist');
 Route::post('/save-review', [ShopController::class, 'storeReview'])->name('front.storeReview');
 
+Route::get('/pages/{name}', [FrontController::class, 'pages'])->name('pages.details');
 
 Route::group(['prefix' => 'user'], function () {
 
@@ -75,6 +76,9 @@ Route::group(['prefix' => 'user'], function () {
         Route::post('/update-profile', [AccountController::class, 'updateProfile'])->name('user.updateProfile');
         Route::get('/orders', [AccountController::class, 'orders'])->name('user.orders');
         Route::get('/order-deatails/{orderId}', [AccountController::class, 'orderDetails'])->name('user.orderDetails');
+
+        // Route::get('/payments/', [PaymentCon::class, 'orders'])->name('user.payments');
+
 
         Route::get('/wishlist', [FrontController::class, 'wishlist'])->name('user.wishlist');
         Route::post('/deleteWishlist', [FrontController::class, 'deleteWishlist'])->name('user.deleteWishlist');

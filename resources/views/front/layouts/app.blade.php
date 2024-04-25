@@ -223,7 +223,7 @@
                 <div class="flex flex-col justify-start gap-2 mt-6">
                     <a href="{{ route('user.account') }}" class="link"><i class="fa-regular fa-address-card mr-2"></i>My Account</a>
                     <a href="{{ route('user.orders') }}" class="link"><i class="fa-solid fa-gift mr-2"></i>My Orders</a>
-                    <a href="{{ route('user.payments') }}" class="link"><i class="fa-solid fa-gift mr-2"></i>My Payments</a>
+                    {{-- <a href="{{ route('user.payments') }}" class="link"><i class="fa-solid fa-gift mr-2"></i>My Payments</a> --}}
                     <a href="{{ route('user.wishlist') }}" class="link"><i class="fa-regular fa-heart mr-2"></i>My Wish Lists</a>
                     <a href="{{ route('front.carts') }}" class="link"><i class="fa-solid fa-shopping-cart mr-2"></i>My Cart</a>
                     <a href="{{ route('user.logout') }}" class="link"><i class="fa-solid fa-power-off mr-2"></i>Logout</a>

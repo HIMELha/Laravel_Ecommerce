@@ -23,24 +23,15 @@
                         <div class="w-full flex justify-between gap-4 md:gap-10">
                             <div class="w-full flex flex-col gap-2">
                                 <label for="name" class="label"><i class="fa-regular fa-user mr-1"></i> Full Name</label>
-<<<<<<< HEAD
                                 <input type="text" name="name" placeholder="Your full name" value="John Deo" class="input">
                             </div>
                             <div class="w-full flex flex-col gap-2">
                                 <label for="email" class="label"><i class="fa-regular fa-envelope mr-1"></i> Email</label>
                                 <input type="text" name="name" placeholder="Email address" value="Exampl@email.com" class="input">
-=======
-                                <input type="text" name="name" placeholder="Your full name" value="{{ $user->name }}" class="input">
-                            </div>
-                            <div class="w-full flex flex-col gap-2">
-                                <label for="email" class="label"><i class="fa-regular fa-envelope mr-1"></i> Email</label>
-                                <input type="text" name="name" placeholder="Email address" value="{{ $user->email }}" class="input">
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                             </div>
                         </div>
                         <div class="w-full flex justify-between gap-4 md:gap-10">
                             <div class="w-full flex flex-col gap-2">
-<<<<<<< HEAD
                                 <label for="Address" class="label"><i class="fa-solid fa-location-dot mr-1"></i>Address</label>
                                 <input type="text" name="Address" placeholder="Home address" value="#Newyork city , 77th road" class="input">
                             </div>
@@ -55,14 +46,6 @@
                         </div>
 
                         <button type="submit" class="btn">Update</button>
-=======
-                                <label for="number" class="label"><i class="fa-solid fa-mobile-screen mr-1"></i>Phone number</label>
-                                <input type="number" name="number" placeholder="Email address" value="{{ $user->phone }}" class="input">
-                            </div>
-                        </div>
-
-                        <a href="{{ route('admin.settings') }}" class="btn text-center">Update</a>
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                     </form>
                 </div>
 
@@ -79,12 +62,7 @@
                                 <input type="password" name="name" placeholder="Email address" value="12345678" class="input">
                             </div>
 
-<<<<<<< HEAD
                             <button type="submit" class="btn">Update</button>
-=======
-                            <a href="{{ route('admin.settings') }}" class="btn text-center">Update</a>
-
->>>>>>> 80d99c3af56bc02a7f1fa0fd0d577fa511db1ab9
                         </div>
                     </form>
                 </div>
