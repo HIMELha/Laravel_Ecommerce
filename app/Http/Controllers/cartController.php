@@ -266,7 +266,7 @@ class cartController extends Controller
             $order->state = $request->state;
             $order->city = $request->city;
             $order->zip = $request->zip;
-            $order->notes = $request->notes;
+            $order->admin_notes = $request->notes ? $request->notes : 'No note added';
             $order->apartment = $request->apartment;
             $order->country_id = $request->country;
             $order->save();
