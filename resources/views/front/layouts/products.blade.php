@@ -50,11 +50,11 @@
                 @else
                     <div class="sm:w-1/1 flex flex-col justify-center items-center">
 
-                        <img  style="width: 300px; margin: 30px 0;" src="https://i0.wp.com/www.memelate.com/wp-content/uploads/2023/02/toiob-ali-faruk-confused-meme-template.png?resize=600%2C465&ssl=1" alt="" class="rounded-full w-[200px] h-[200px]">
-                        <h2 class="m-2 text-2xl text-center">The database is currently processing your search. <br> Thank you for your patience 🙂🙏</h2>
+                        {{-- <img  style="width: 300px; margin: 30px 0;" src="https://i0.wp.com/www.memelate.com/wp-content/uploads/2023/02/toiob-ali-faruk-confused-meme-template.png?resize=600%2C465&ssl=1" alt="" class="rounded-full w-[200px] h-[200px]">
+                         --}}
 
                         <img  id="targetImagess" src="https://gifdb.com/images/high/sad-man-crying-out-loud-meme-74loufg1hlyn7h48.gif" alt="" class="rounded-full w-[200px]">
-                        <h2 class="m-2 text-2xl" >No Products Were Found 😭😭</h2>
+                        <h2 class="m-2 text-2xl text-center">The database is currently processing your search. <br> Thank you for your patience 🙂🙏</h2>
 
                         <audio id="sound" src="{{ asset('front-assets/public/crying.mp3')}}" controls autoplay class="hidden"></audio>
                     </div>

@@ -77,6 +77,9 @@ Route::group(['prefix' => 'user'], function () {
         Route::get('/orders', [AccountController::class, 'orders'])->name('user.orders');
         Route::get('/order-deatails/{orderId}', [AccountController::class, 'orderDetails'])->name('user.orderDetails');
 
+        // Route::get('/payments/', [PaymentCon::class, 'orders'])->name('user.payments');
+
+
         Route::get('/wishlist', [FrontController::class, 'wishlist'])->name('user.wishlist');
         Route::post('/deleteWishlist', [FrontController::class, 'deleteWishlist'])->name('user.deleteWishlist');
         

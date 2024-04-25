@@ -74,7 +74,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-min mt-2">Be carefull while changing your password, if you lost your password it will be hard to reset</h3>
+                        <h3 class="text-min mt-2">Be careful while changing your password, if you lost your password it will be hard to reset</h3>
                         <div class="w-full flex flex-col gap-1 mt-6">
                                <button class="btn">Update Info</button>
                         </div>

@@ -30,7 +30,7 @@
       </div>
 
       <div class="flex flex-col sm:flex-row justify-between items-center gap-2 mt-4">
-         <a href="{{ route('user.payments') }}"><button class="btn-hover p-3 mt-2">Payment history</button></a>
+         {{-- <a href="{{ route('user.payments') }}"><button class="btn-hover p-3 mt-2">Payment history</button></a> --}}
          <a href="{{ route('front.product') }}"><button class="headBtn mt-2">Continue shopping</button></a>
       </div>
       </div>
